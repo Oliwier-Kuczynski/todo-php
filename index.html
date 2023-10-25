@@ -3,81 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
     <title>To-Do</title>
   </head>
   <body>
-    <header>
-      <h1>To-Do</h1>
-    </header>
-    <main>
-      <section>
-        <button>
-          <img src="" alt="" />
-          <p>Nowe Zadanie</p>
-        </button>
-        <button>
-          <img src="" alt="" />
-          <p>Filter</p>
-        </button>
-        <!-- <div> -->
-        <!-- <form action="" method="get">
+    <div>
+      <header class="header">
+        <h1>To-Do</h1>
+      </header>
+      <main>
+        <section class="controls-section">
+          <div class="flex gap">
+            <button class="btn--primary flex gap">
+              <img src="" alt="" />
+              <p>Nowe Zadanie</p>
+            </button>
+            <button class="btn--secondary flex gap">
+              <img src="" alt="" />
+              <p>Filter</p>
+            </button>
+          </div>
+          <!-- <div> -->
+          <!-- <form action="" method="get">
+                <div>
+                  <label for="create-task">Treść</label>
+                  <input
+                    type="search"
+                    name="create-task"
+                    id="create-task"
+                    placeholder="Treść zadania..."
+                  />
+                </div>
+                <div>
+                  <label for="category">Kategoria</label>
+                  <select name="category" id="category"></select>
+                </div>
+              </form>
+              <form action="" method="get">
+                <fieldset>
+                  <label for="finished">Ukończone</label>
+                  <input type="checkbox" name="finished" id="finished" />
+                  <label for="not-finished">Nie Ukończone</label>
+                  <input type="checkbox" name="not-finished" id="not-finished" />
+                  <label for=""></label>
+                  <input type="checkbox" name="" id="" />
+                  <label for=""></label>
+                  <input type="checkbox" name="" id="" />
+                  <label for=""></label>
+                  <input type="checkbox" name="" id="" />
+                </fieldset>
+                <div>
+                  <label for="sort">Sortuj</label>
+                  <select name="sort" id="sort">
+                    <option value="date-desc">Data malejąca</option>
+                    <option value="date-asc">Data rosnąca</option>
+                  </select>
+                </div>
+              </form> -->
+          <!-- </div> -->
+        </section>
+        <section>
+          <ul class="grid gap">
+            <li class="task flex gap">
+              <input type="checkbox" name="" id="">
               <div>
-                <label for="create-task">Treść</label>
-                <input
-                  type="search"
-                  name="create-task"
-                  id="create-task"
-                  placeholder="Treść zadania..."
-                />
+                <h2>Finish user onboarding</h2>
+                <div>
+                  <img src="" alt="">
+                  <p>08.09.2023</p>
+                </div>
+                <div>
+                  <div></div>
+                  <p>kategoria</p>
+                </div>
               </div>
-              <div>
-                <label for="category">Kategoria</label>
-                <select name="category" id="category"></select>
-              </div>
-            </form>
-            <form action="" method="get">
-              <fieldset>
-                <label for="finished">Ukończone</label>
-                <input type="checkbox" name="finished" id="finished" />
-                <label for="not-finished">Nie Ukończone</label>
-                <input type="checkbox" name="not-finished" id="not-finished" />
-                <label for=""></label>
-                <input type="checkbox" name="" id="" />
-                <label for=""></label>
-                <input type="checkbox" name="" id="" />
-                <label for=""></label>
-                <input type="checkbox" name="" id="" />
-              </fieldset>
-              <div>
-                <label for="sort">Sortuj</label>
-                <select name="sort" id="sort">
-                  <option value="date-desc">Data malejąca</option>
-                  <option value="date-asc">Data rosnąca</option>
-                </select>
-              </div>
-            </form> -->
-        <!-- </div> -->
-      </section>
-      <section>
-        <ul>
-          <li>
-            <div>
-              <p>Przykładowe zadanie</p>
-              <p>2020-12-12</p>
-            </div>
-            <div>
-              <button>
-                <img src="" alt="" />
-                <p>Edytuj</p>
-              </button>
-              <button>
-                <img src="" alt="" />
-                <p>Usuń</p>
-              </button>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
+
