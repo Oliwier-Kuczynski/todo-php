@@ -179,6 +179,7 @@ data {
 }
 
 .context-menu li {
+  align-items: center;
   padding: 0.5rem 1rem;
   border-radius: 0.4rem;
   cursor: pointer;
@@ -188,4 +189,12 @@ data {
 .context-menu li:hover {
   background-color: #5e3bbe;
   color: #fff;
+}
+
+.context-menu li:hover > svg path {
+  fill: #fff;
+}
+
+.task--completed {
+  opacity: 0.5;
 }

@@ -15,15 +15,18 @@ const toggle = (element) => {
   element.classList.toggle("d-none");
 };
 
-filterBtn.addEventListener("click", () => {
-  toggle(filter);
-});
+const deleteTask = () => {
+  const task = document.querySelector("[data-task]");
+  const taskId = task.dataset.id;
 
-addTaskBtn.addEventListener("click", () => {
-  toggle(addTask);
-});
+  fetch(`index.php?record-id=${taskId}`, {
+    method: "DELETE",
+  });
 
-document.addEventListener("contextmenu", (e) => {
+  task.remove();
+};
+
+const openContextMenu = (e) => {
   e.preventDefault();
 
   if (!e.target.classList.contains("task")) return;
@@ -37,5 +40,32 @@ document.addEventListener("contextmenu", (e) => {
 
   document.addEventListener("click", () => {
     contextMenu.classList.add("d-none");
+  });
+};
+
+filterBtn.addEventListener("click", () => {
+  toggle(filter);
+});
+
+addTaskBtn.addEventListener("click", () => {
+  toggle(addTask);
+});
+
+document.addEventListener("contextmenu", (e) => openContextMenu(e));
+
+document
+  .querySelector("[data-delete-task]")
+  .addEventListener("click", deleteTask);
+
+document.querySelectorAll("[data-task-check]").forEach((taskCheck) => {
+  taskCheck.addEventListener("change", () => {
+    const task = taskCheck.closest("[data-task]");
+    const taskId = task.dataset.id;
+
+    fetch(`index.php?record-id=${taskId}`, {
+      method: "PUT",
+    });
+
+    task.classList.toggle("task--completed");
   });
 });
